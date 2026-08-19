@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacta con 4PL Global - Simplifica tu logística</title>
+    <meta name="description" content="Contacta con nosotros y descubre cuánto puedes ahorrar en tu logística internacional. Te damos una respuesta en menos de 48 horas." />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">4PL<span>Global</span></div>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="about.html">Sobre nosotros</a>
+                <a href="contact.html" class="active">Contacto</a>
+                <a href="contact.html" class="btn-cta-header">Solicita info</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>¿Hablamos?</h1>
+            <p>Cuéntanos tu proyecto y te damos una respuesta en <strong>menos de 48 horas</strong> con un plan a medida.</p>
+        </div>
+    </section>
+
+    <!-- ===== CONTACTO + AHORRO ===== -->
+    <section class="contact-detalle">
+        <div class="container">
+            <div class="grid-contact">
+                <!-- Formulario -->
+                <div>
+                    <h2>Enviar mensaje</h2>
+                    <form id="contactForm">
+                        <input type="text" id="nombre" placeholder="Nombre y apellidos" required />
+                        <input type="email" id="email" placeholder="Email corporativo" required />
+                        <input type="text" id="telefono" placeholder="Teléfono (opcional)" />
+                        <select id="servicioInteres">
+                            <option value="">¿Qué servicio te interesa?</option>
+                            <option value="packaging">Packaging inteligente</option>
+                            <option value="transporte">Gestión de transporte</option>
+                            <option value="consultoria">Consultoría logística</option>
+                            <option value="integral">Solución integral</option>
+                        </select>
+                        <textarea id="mensaje" placeholder="Cuéntanos qué necesitas... (volumen, destinos, plazos, etc.)" required></textarea>
+                        <button type="submit" class="btn-enviar">➜ Enviar mensaje</button>
+                        <div id="formFeedback" class="form-feedback"></div>
+                    </form>
+                </div>
+
+                <!-- Info + Ahorro estimado -->
+                <div>
+                    <h2>Información de contacto</h2>
+                    <div class="info-contacto">
+                        <p><strong>📞 Teléfono:</strong> +34 600 00 00 00</p>
+                        <p><strong>✉️ Email:</strong> hola@4plglobal.es</p>
+                        <p><strong>📍 Oficinas:</strong> Madrid · Luxemburgo</p>
+                        <p><strong>🌍 Cobertura:</strong> Europa, América, Asia</p>
+                    </div>
+
+                    <div class="ahorro-estimado">
+                        <h3>💰 ¿Cuánto puedes ahorrar?</h3>
+                        <p>Empresas como la tuya están ahorrando entre un <strong>15% y un 30%</strong> en sus costes logísticos trabajando con nosotros.</p>
+                        <ul>
+                            <li>✔️ Optimización de packaging: hasta 20% en fletes</li>
+                            <li>✔️ Consolidación de envíos: hasta 15% en transporte</li>
+                            <li>✔️ Gestión de aduanas: evitamos retrasos y sobrecostes</li>
+                        </ul>
+                        <p style="margin-top:16px;"><strong>¿Quieres saber cuánto puedes ahorrar tú?</strong> Escríbenos y te hacemos una estimación personalizada en 48h.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span>© 2026 4PL Global · Logística Integral</span>
+            <span>
+                <a href="#">Política de privacidad</a> · 
+                <a href="#">Aviso legal</a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
