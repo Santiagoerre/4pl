@@ -112,7 +112,9 @@ nav a.active {
 
 /* ===== HERO (Home) ===== */
 .hero {
-    background: linear-gradient(135deg, var(--azul-profundo) 0%, var(--verde-oscuro) 100%);
+    background:
+        linear-gradient(135deg, rgba(10, 42, 33, 0.88) 0%, rgba(11, 61, 82, 0.82) 100%),
+        url("../img/hero-puerto.jpg") center 65% / cover no-repeat;
     color: var(--blanco);
     padding: 80px 0 70px;
     text-align: center;
@@ -196,14 +198,30 @@ nav a.active {
     padding: 76px 0 70px;
     text-align: center;
 }
+.page-header-servicios {
+    background:
+        linear-gradient(135deg, rgba(10, 42, 33, 0.88) 0%, rgba(11, 61, 82, 0.82) 100%),
+        url("../img/servicios-header.jpg") center 30% / cover no-repeat;
+}
+.page-header-about {
+    background:
+        linear-gradient(135deg, rgba(10, 42, 33, 0.88) 0%, rgba(11, 61, 82, 0.82) 100%),
+        url("../img/about-header.jpg") center 40% / cover no-repeat;
+}
+.page-header-contacto {
+    background:
+        linear-gradient(135deg, rgba(10, 42, 33, 0.88) 0%, rgba(11, 61, 82, 0.82) 100%),
+        url("../img/contacto-header.jpg") center 68% / cover no-repeat;
+}
 .page-header h1 {
     font-size: 2.6rem;
     margin-bottom: 12px;
 }
 .page-header p {
-    font-size: 1.15rem;
-    opacity: 0.9;
-    max-width: 650px;
+    font-size: 1.45rem;
+    line-height: 1.5;
+    opacity: 0.92;
+    max-width: 780px;
     margin: 0 auto;
 }
 
@@ -385,10 +403,11 @@ nav a.active {
     background: var(--blanco);
 }
 
-.beneficio-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+.grid-beneficio {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 60px;
+    align-items: center;
 }
 
 .beneficio-content h2 {
@@ -400,9 +419,9 @@ nav a.active {
 
 .beneficio-content > p {
     max-width: 650px;
-    margin: 0 auto 40px;
     color: var(--texto-claro);
     font-size: 1.05rem;
+    margin-bottom: 40px;
 }
 
 .beneficios-list {
@@ -450,6 +469,13 @@ nav a.active {
     }
     .areas-grid {
         grid-template-columns: 1fr 1fr;
+    }
+    .grid-beneficio {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+    .grid-beneficio .img-placeholder {
+        order: -1;
     }
 }
 
@@ -524,7 +550,6 @@ nav a.active {
 .img-placeholder {
     background: var(--verde-oscuro);
     color: var(--blanco);
-    padding: 50px 30px;
     border-radius: 24px;
     text-align: center;
     min-height: 200px;
@@ -532,6 +557,7 @@ nav a.active {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 .img-placeholder span {
     font-size: 4rem;
@@ -539,6 +565,13 @@ nav a.active {
 .img-placeholder p {
     margin-top: 12px;
     font-weight: 600;
+}
+.img-placeholder img {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+    display: block;
 }
 
 .servicios-detalle {
@@ -739,25 +772,42 @@ nav a.active {
     top: 110px;
 }
 
+.servicio-cabecera {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-left: -12px;
+}
+
+.servicio-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
 .servicio-numero {
     display: block;
-    font-size: 3.4rem;
+    font-size: 5.6rem;
     font-weight: 700;
-    line-height: 1;
-    letter-spacing: -2px;
+    line-height: 0.9;
+    letter-spacing: -3px;
     color: var(--acento);
     opacity: 0.22;
-    margin-bottom: 20px;
 }
 
 .servicio-icono-badge {
-    width: 56px;
-    height: 56px;
-    margin-bottom: 22px;
-    border-radius: 16px;
+    width: 78px;
+    height: 78px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.servicio-encabezado .servicio-intro {
+    margin-bottom: 0;
 }
 
 .servicio-1 .servicio-icono-badge {
@@ -771,8 +821,8 @@ nav a.active {
 }
 
 .servicio-icono-badge svg {
-    width: 27px;
-    height: 27px;
+    width: 36px;
+    height: 36px;
 }
 
 .servicio-rail h2 {
@@ -789,20 +839,28 @@ nav a.active {
     margin-bottom: 28px;
 }
 
-.servicio-cierre {
-    padding: 22px 24px;
-    border-radius: 14px;
-    background: var(--blanco);
-    border: 1px solid var(--borde-suave);
-    border-left: 3px solid var(--acento);
-    color: var(--verde-oscuro);
-    font-size: 0.94rem;
-    line-height: 1.6;
+.servicio-foto {
+    margin-top: 32px;
+    border-radius: 18px;
+    overflow: hidden;
 }
 
-.servicio-2 .servicio-cierre {
-    border-left-color: var(--azul-profundo);
-    color: var(--azul-profundo);
+.servicio-foto img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    object-fit: cover;
+    object-position: center 25%;
+    display: block;
+}
+
+.servicio-foto-dashboard {
+    max-width: 720px;
+    margin: 34px auto 0;
+}
+
+.servicio-foto-dashboard img {
+    height: 300px;
 }
 
 .lista-servicio-grande {
@@ -829,10 +887,10 @@ nav a.active {
 }
 
 .lista-servicio-grande .punto-icono {
-    width: 44px;
-    height: 44px;
+    width: 52px;
+    height: 52px;
     flex-shrink: 0;
-    border-radius: 12px;
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -841,8 +899,8 @@ nav a.active {
 }
 
 .lista-servicio-grande .punto-icono svg {
-    width: 21px;
-    height: 21px;
+    width: 25px;
+    height: 25px;
 }
 
 .servicio-2 .lista-servicio-grande .punto-icono {
@@ -854,14 +912,15 @@ nav a.active {
     color: var(--texto-claro);
     font-size: 0.99rem;
     line-height: 1.65;
-    padding-top: 8px;
+    padding-top: 6px;
 }
 
 .lista-servicio-grande li strong {
     display: block;
     color: var(--azul-profundo);
-    font-size: 1.05rem;
-    margin-bottom: 4px;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 6px;
 }
 
 .lista-servicio-grande li strong + br {
@@ -1412,6 +1471,20 @@ footer a:hover {
     }
     .hero h1 {
         font-size: 1.8rem;
+    }
+    .servicio-cabecera {
+        gap: 14px;
+    }
+    .servicio-numero {
+        font-size: 2.8rem;
+    }
+    .servicio-icono-badge {
+        width: 52px;
+        height: 52px;
+    }
+    .servicio-icono-badge svg {
+        width: 24px;
+        height: 24px;
     }
 }
 
