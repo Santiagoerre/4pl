@@ -63,3 +63,26 @@ document.querySelectorAll('nav a').forEach(link => {
         link.classList.add('active');
     }
 });
+
+
+function abrirModalLegal(tab) {
+    document.getElementById('cogton-modal-legal').classList.add('active');
+    cambiarTab(tab);
+}
+
+function cerrarModalLegal() {
+    document.getElementById('cogton-modal-legal').classList.remove('active');
+}
+
+function cerrarModalLegalOverlay(event) {
+    if (event.target.id === 'cogton-modal-legal') {
+        cerrarModalLegal();
+    }
+}
+
+function cambiarTab(tab) {
+    document.getElementById('contenido-aviso').style.display = tab === 'aviso' ? 'block' : 'none';
+    document.getElementById('contenido-privacidad').style.display = tab === 'privacidad' ? 'block' : 'none';
+    document.getElementById('tab-aviso').classList.toggle('active', tab === 'aviso');
+    document.getElementById('tab-privacidad').classList.toggle('active', tab === 'privacidad');
+}
