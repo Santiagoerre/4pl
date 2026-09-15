@@ -286,8 +286,96 @@
         <span>© 2026 4Logik · Logística Integral</span>
 
         <span>
-            <a href="#">Política de privacidad</a> ·
-            <a href="#">Aviso legal</a>
+            <a href="#" onclick="abrirModalLegal('aviso'); return false;" class="cogton-legal-link">Aviso Legal</a>
+            <a href="#" onclick="abrirModalLegal('privacidad'); return false;" class="cogton-legal-link">Política de Privacidad</a>
+
+            <!-- Modal -->
+            <div id="cogton-modal-legal" class="cogton-modal-overlay" onclick="cerrarModalLegalOverlay(event)">
+                <div class="cogton-modal-content">
+                    <button class="cogton-modal-close" onclick="cerrarModalLegal()">&times;</button>
+            
+                <div class="cogton-modal-tabs">
+                    <button id="tab-aviso" class="cogton-modal-tab active" onclick="cambiarTab('aviso')">Aviso Legal</button>
+                    <button id="tab-privacidad" class="cogton-modal-tab" onclick="cambiarTab('privacidad')">Política de Privacidad</button>
+                </div>
+            
+                <div id="contenido-aviso" class="cogton-modal-body">
+                    <h2>Aviso Legal</h2>
+                    <h3>1. Datos del titular</h3>
+                    <p>
+                        En cumplimiento de la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI), se informa de los siguientes datos:
+                    </p>
+                    <ul>
+                        <li><strong>Titular:</strong> [NOMBRE DE LA EMPRESA]</li>
+                        <li><strong>NIF/CIF:</strong> [NIF/CIF]</li>
+                        <li><strong>Domicilio:</strong> [DIRECCIÓN COMPLETA]</li>
+                        <li><strong>Email de contacto:</strong> [EMAIL]</li>
+                        <li><strong>Teléfono:</strong> [TELÉFONO]</li>
+                        <li><strong>Inscripción registral:</strong> [DATOS REGISTRO MERCANTIL, si aplica]</li>
+                    </ul>
+                    <h3>2. Objeto</h3>
+                    <p>
+                        El presente sitio web (en adelante, "el Sitio") tiene como finalidad ofrecer información sobre los servicios logísticos de [NOMBRE DE LA EMPRESA], así como facilitar el contacto con potenciales clientes.
+                    </p>
+                    <h3>3. Condiciones de uso</h3>
+                    <p>
+                        El acceso y uso de este Sitio implica la aceptación de las condiciones aquí establecidas. El usuario se compromete a hacer un uso adecuado del Sitio, absteniéndose de utilizarlo con fines ilícitos o que puedan dañar a terceros.
+                    </p>
+                    <h3>4. Propiedad intelectual</h3>
+                    <p>
+                        Todos los contenidos del Sitio (textos, imágenes, logotipos, diseño, código fuente) son propiedad de [NOMBRE DE LA EMPRESA] o de terceros que han autorizado su uso, y están protegidos por la normativa de propiedad intelectual. Queda prohibida su reproducción, distribución o modificación sin autorización previa.
+                    </p>
+                    <h3>5. Exclusión de responsabilidad</h3>
+                    <p>
+                        [NOMBRE DE LA EMPRESA] no se responsabiliza de los daños derivados de fallos técnicos, interrupciones del servicio, o del uso indebido del Sitio por parte del usuario.
+                    </p>
+                    <h3>6. Legislación aplicable</h3>
+                    <p>
+                        Las presentes condiciones se rigen por la legislación española. Para cualquier controversia, las partes se someten a los juzgados y tribunales de [CIUDAD/PROVINCIA], salvo que la normativa de consumidores establezca otro fuero.
+                    </p>
+                </div>
+            
+                <div id="contenido-privacidad" class="cogton-modal-body" style="display:none;">
+                    <h2>Política de Privacidad</h2>
+                    <h3>1. Responsable del tratamiento</h3>
+                    <ul>
+                        <li><strong>Responsable:</strong> [NOMBRE DE LA EMPRESA]</li>
+                        <li><strong>NIF/CIF:</strong> [NIF/CIF]</li>
+                        <li><strong>Dirección:</strong> [DIRECCIÓN COMPLETA]</li>
+                        <li><strong>Email de contacto:</strong> [EMAIL]</li>
+                    </ul>
+                    <h3>2. Finalidad del tratamiento</h3>
+                    <p>
+                        Los datos personales que nos facilites a través de formularios de contacto, agendar llamadas, o cualquier otro medio del Sitio, serán tratados con las siguientes finalidades:
+                    </p>
+                    <ul>
+                        <li>Gestionar tu solicitud de información o llamada comercial.</li>
+                        <li>Enviarte comunicaciones relacionadas con nuestros servicios (si nos autorizas).</li>
+                        <li>Cumplir con obligaciones legales.</li>
+                    </ul>
+                    <h3>3. Legitimación</h3>
+                    <p>
+                        El tratamiento de tus datos se basa en tu consentimiento, otorgado al rellenar los formularios del Sitio o al solicitar información/servicios.
+                    </p>
+                    <h3>4. Conservación de los datos</h3>
+                    <p>
+                        Tus datos se conservarán mientras exista una relación comercial o interés mutuo, y posteriormente durante los plazos legalmente exigidos para atender posibles responsabilidades.
+                    </p>
+                    <h3>5. Destinatarios</h3>
+                    <p>
+                        No se cederán datos a terceros, salvo obligación legal o cuando sea necesario para prestar el servicio (por ejemplo, herramientas de agenda como Google Calendar, en cuyo caso dicho proveedor actúa como encargado del tratamiento).
+                    </p>
+                    <h3>6. Derechos del usuario</h3>
+                    <p>
+                        Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad de tus datos, enviando un email a <strong>[EMAIL]</strong>, adjuntando copia de un documento que acredite tu identidad.
+                    </p>
+                    <h3>7. Cookies</h3>
+                    <p>
+                        Este Sitio [utiliza / no utiliza] cookies propias y/o de terceros para [finalidad, ej. análisis de tráfico]. Puedes consultar más información en nuestra Política de Cookies [enlace, si existe].
+                    </p>
+                </div>
+              </div>
+            </div>
         </span>
     </div>
 </footer>
